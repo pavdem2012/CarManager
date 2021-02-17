@@ -4,29 +4,9 @@ public class CarManager {
 
     public static void main(String[] args) {
     	
-        Car prius = new Car();
+        Car prius = new Car("Toyota Prius", 1200, 2008, 15000, "Green");
         
-        prius.name = "Toyota Prius";
-        
-        prius.color = "Green";
-        
-        prius.yearOfProdaction = 2008;
-        
-        prius.price = 15000;
-        
-        prius.weight = 1200;
-        
-        Car renault = new Car();
-        renault.name = "Renault Laguna";
-        
-        renault.color = "Wite";
-        
-        renault.yearOfProdaction = 2000;
-        
-        renault.price = 9700;
-        
-        renault.weight = 1600;
-
+        Car renault = new Car("Renault Laguna", 1600, 2000, 9700, "Wite"); 
 	}
 
 }
