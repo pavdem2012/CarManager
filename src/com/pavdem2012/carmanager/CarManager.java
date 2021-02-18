@@ -9,7 +9,13 @@ public class CarManager {
         Car renault = new Car("Renault Laguna", 2000, 9700, 1600, "White");
         
         Car renault2 = new Car("Renault Laguna", 2000, 9700, 1600, "White");
-
+        
+        prius.addDistance(10000);
+        prius.addDistance(5000);
+        
+        renault.addDistance(22500);
+        renault.addDistance(12345);
+        
         System.out.println(prius);
         System.out.println(renault);
 

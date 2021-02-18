@@ -6,6 +6,7 @@ public class Car {
     int price;
     int weight;
     Color color;
+    private int distance = 0;
 
     public Car(String name, int yearOfProdaction, int price, int weight, String color) {
         this.name = name;
@@ -14,11 +15,17 @@ public class Car {
         this.weight = weight;
         this.color = Color.valueOf(color);
     }
-
+    public void addDistance(int additinalDistance) {
+        distance += additinalDistance;
+    }
+    
+    public int getDistance() {
+        return distance;
+    }
     @Override
     public String toString() {
         return "Car [name=" + name + ", yearOfProdaction=" + yearOfProdaction + ", price=" + price + ", weight="
-                + weight + ", color=" + color + "]";
+                + weight + ", color=" + color + ", distance=" + distance + "]";
     }
 
     @Override
