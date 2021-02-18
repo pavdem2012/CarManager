@@ -12,9 +12,11 @@ public class CarManager {
         
         prius.addDistance(10000);
         prius.addDistance(5000);
+        prius.addDistance(20.5);
         
         renault.addDistance(22500);
         renault.addDistance(12345);
+        renault.addDistance(33.7);
         
         System.out.println(prius);
         System.out.println(renault);

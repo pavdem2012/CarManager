@@ -6,7 +6,9 @@ public class Car {
     int price;
     int weight;
     Color color;
-    private int distance = 0;
+    private double distance = 0;
+    
+
 
     public Car(String name, int yearOfProdaction, int price, int weight, String color) {
         this.name = name;
@@ -15,11 +17,14 @@ public class Car {
         this.weight = weight;
         this.color = Color.valueOf(color);
     }
+    public void addDistance(double additinalDistance) {
+        distance += additinalDistance;
+    }
     public void addDistance(int additinalDistance) {
         distance += additinalDistance;
     }
     
-    public int getDistance() {
+    public double getDistance() {
         return distance;
     }
     @Override
