@@ -7,7 +7,7 @@ public class Car {
     int weight;
     Color color;
     private double distance = 0;
-    
+
 
 
     public Car(String name, int yearOfProdaction, int price, int weight, String color) {
@@ -19,10 +19,12 @@ public class Car {
     }
     public void addDistance(double additinalDistance) {
         distance += additinalDistance;
+    
+    if (additinalDistance <= 0) {
+    System.out.println("ATTENTION!!!УВАГА!!!Пробег не может быть отрицательным!!!");
     }
-    public void addDistance(int additinalDistance) {
-        distance += additinalDistance;
-    }
+    else {}
+    }  
     
     public double getDistance() {
         return distance;
