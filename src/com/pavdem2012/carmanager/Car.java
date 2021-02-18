@@ -5,9 +5,9 @@ public class Car {
 	int yearOfProdaction;
 	int price;
 	int weight;
-	String color;
+	Color color;
 
-	public Car(String name, int yearOfProdaction, int price, int weight, String color) {
+	public Car(String name, int yearOfProdaction, int price, int weight, Color color) {
 		this.name = name;
 		this.yearOfProdaction = yearOfProdaction;
 		this.price = price;
