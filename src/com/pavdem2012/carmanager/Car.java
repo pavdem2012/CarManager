@@ -8,8 +8,6 @@ public class Car {
     Color color;
     private double distance = 0;
 
-
-
     public Car(String name, int yearOfProdaction, int price, int weight, String color) {
         this.name = name;
         this.yearOfProdaction = yearOfProdaction;
@@ -17,22 +15,28 @@ public class Car {
         this.weight = weight;
         this.color = Color.valueOf(color);
     }
+
     public void addDistance(double additinalDistance) {
-        distance += additinalDistance;
-    
-    if (additinalDistance <= 0) {
-    System.out.println("ATTENTION!!!УВАГА!!!Пробег не может быть отрицательным!!!");
-    }
-    else {}
+        if (additinalDistance <= 0) {
+            System.out.println("ATTENTION!!!УВАГА!!!Пробег не может быть отрицательным!!!");
+        }
+        else  { 
+            distance += additinalDistance;
+        }
     }  
-    
+
     public double getDistance() {
         return distance;
     }
+
     @Override
     public String toString() {
-        return "Car [name=" + name + ", yearOfProdaction=" + yearOfProdaction + ", price=" + price + ", weight="
-                + weight + ", color=" + color + ", distance=" + distance + "]";
+        return "Car [name=" + name 
+                + ", yearOfProdaction=" + yearOfProdaction 
+                + ", price=" + price 
+                + ", weight=" + weight 
+                + ", color=" + color 
+                + ", distance=" + distance + "]";
     }
 
     @Override
@@ -71,6 +75,4 @@ public class Car {
             return false;
         return true;
     }
-    
-
 }
