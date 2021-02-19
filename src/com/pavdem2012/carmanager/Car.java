@@ -7,6 +7,7 @@ public class Car {
     int weight;
     Color color;
     private double distance = 0;
+    private static String checkCompanyName="";
 
     public Car(String name, int yearOfProdaction, int price, int weight, String color) {
         this.name = name;
@@ -18,7 +19,7 @@ public class Car {
 
     public void addDistance(double additinalDistance) {
         if (additinalDistance <= 0) {
-            System.out.println("ATTENTION!!!УВАГА!!!ПРОБЕГ НЕ МОЖЕТ БЫТЬ ОТРИЦАТЕЛЬНЫМ!!!");
+            throw new ArithmeticException("ATTENTION!!!УВАГА!!!ПРОБЕГ НЕ МОЖЕТ БЫТЬ ОТРИЦАТЕЛЬНЫМ!!!");
         }
         else  { 
             distance += additinalDistance;
@@ -74,5 +75,13 @@ public class Car {
         if (yearOfProdaction != other.yearOfProdaction)
             return false;
         return true;
+    }
+    
+    public static void checkCarInCompany(String company) {
+        checkCompanyName=company;
+    }
+    
+    public static String getCheckCarInCompany() {
+        return checkCompanyName;
     }
 }
