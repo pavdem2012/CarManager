@@ -18,7 +18,7 @@ public class Car {
 
     public void addDistance(double additinalDistance) {
         if (additinalDistance <= 0) {
-            System.out.println("ATTENTION!!!ÓÂÀÃÀ!!!Ïðîáåã íå ìîæåò áûòü îòðèöàòåëüíûì!!!");
+            System.out.println("ATTENTION!!!Ð£Ð’ÐÐ“Ð!!!ÐŸÐ ÐžÐ‘Ð•Ð“ ÐÐ• ÐœÐžÐ–Ð•Ð¢ Ð‘Ð«Ð¢Ð¬ ÐžÐ¢Ð Ð˜Ð¦ÐÐ¢Ð•Ð›Ð¬ÐÐ«Ðœ!!!");
         }
         else  { 
             distance += additinalDistance;
