@@ -23,7 +23,7 @@ public class Car {
         else  { 
             distance += additinalDistance;
         }
-    }  
+    } 
 
     public double getDistance() {
         return distance;
