@@ -6,14 +6,16 @@ public class CarManager {
 
         Car prius = new Car("Toyota Prius", 2008, 15000, 1200, "Green");
 
-        Car renault = new Car("Renault Laguna", 2000, 9700, 1600, "White");
+        Car renault = new Bus("Renault Laguna", 2000, 9700, 1600, "White");
         
-        Car renault2 = new Car("Renault Laguna", 2000, 9700, 1600, "White");
+        Car renault2 = new Truck("Renault Laguna", 2000, 9700, 1600, "White");
 
-        addDistanceWithCheck(prius, -12320.5);
-        addDistanceWithCheck(renault, 22500);
-        addDistanceWithCheck(renault, 12345);
-        addDistanceWithCheck(renault, 33.7);
+        addDistanceWithCheck(prius, 8320.5);
+        addDistanceWithCheck(prius, -2000);
+        addDistanceWithCheck(renault, 11000);
+        addDistanceWithCheck(renault, 20000);
+        addDistanceWithCheck(renault2, 42000);
+        addDistanceWithCheck(renault2, 9000.7);
 
         System.out.println(prius);
         System.out.println(renault);
@@ -22,6 +24,10 @@ public class CarManager {
         System.out.println(renault.equals(renault2));
         System.out.println(renault2.equals(prius));
         System.out.println(renault.equals(prius));
+
+        System.out.println("Готовность к сервису car: " + prius.isReadyToService());
+        System.out.println("Готовность к сервису bus: " + renault.isReadyToService());
+        System.out.println("Готовность к сервису truck: " + renault2.isReadyToService());
     }
     
     public static void addDistanceWithCheck(Car car, double myDistance) {

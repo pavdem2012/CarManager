@@ -7,6 +7,7 @@ public class Car {
     int weight;
     Color color;
     private double distance = 0;
+    protected int distanceOnService = 0;
 
     public Car(String name, int yearOfProdaction, int price, int weight, String color) {
         this.name = name;
@@ -22,8 +23,21 @@ public class Car {
         }
         else  { 
             distance += additinalDistance;
+            distanceOnService += additinalDistance;
         }
-    } 
+    }
+    public boolean isReadyToService() {
+        if(distanceOnService > 10000) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+    
+    
+    public int getDistanceOnService() {
+        return distanceOnService;
+    }
 
     public double getDistance() {
         return distance;
@@ -31,12 +45,9 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car [name=" + name 
-                + ", yearOfProdaction=" + yearOfProdaction 
-                + ", price=" + price 
-                + ", weight=" + weight 
-                + ", color=" + color 
-                + ", distance=" + distance + "]";
+        return "Car [name=" + name + ", yearOfProdaction=" + yearOfProdaction + ", price=" + price + ", weight="
+                + weight + ", color=" + color + ", distance=" + distance + ", distanceOnService=" + distanceOnService
+                + "]";
     }
 
     @Override
