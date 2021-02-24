@@ -1,6 +1,6 @@
 package com.pavdem2012.carmanager;
 
-public class Car {
+public abstract class Car {
     String name;
     int yearOfProdaction;
     int price;
@@ -26,13 +26,7 @@ public class Car {
             distanceOnService += additinalDistance;
         }
     }
-    public boolean isReadyToService() {
-        if(distanceOnService > 10000) {
-            return true;
-        } else {
-            return false;
-        }
-        }
+    public abstract boolean isReadyToService() ;
     
     
     public int getDistanceOnService() {
