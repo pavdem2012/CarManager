@@ -1,6 +1,6 @@
 package com.pavdem2012.carmanager;
 
-public abstract class Car {
+public abstract class Car implements Serviceable {
     String name;
     int yearOfProdaction;
     int price;
@@ -26,9 +26,7 @@ public abstract class Car {
             distanceOnService += additinalDistance;
         }
     }
-    public abstract boolean isReadyToService() ;
-    
-    
+
     public int getDistanceOnService() {
         return distanceOnService;
     }
