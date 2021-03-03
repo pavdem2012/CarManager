@@ -1,5 +1,8 @@
 package com.pavdem2012.carmanager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CarManager {
 
     public static void main(String[] args) {
@@ -7,12 +10,23 @@ public class CarManager {
         Car prius = new PassengerCar("Toyota Prius", 2008, 15000, 1200, "Green");
 
         Car bus = new Bus("Neoplan", 2000, 9700, 1600, "White");
-        
+
         Car truck = new Truck("Камаз К5", 2000, 9700, 1600, "White");
+        // Добавление и вывод коллекции (Car)
+        List<Car> cars = new ArrayList<>();
+        cars.add(prius);
+        cars.add(bus);
+        cars.add(truck);
+        System.out.println(cars);
 
         AgriculturalMachinery bulldozer = new Bulldozer("Казахстан", 1972, 9000, 12000, "Blue");
         AgriculturalMachinery harvester = new Harvester("Енисей", 1995, 25000, 8500, "Red");
-
+     // Добавление и вывод коллекции (AgriculturalMachinery)
+        List<AgriculturalMachinery> agriculturalMachineries = new ArrayList<>();
+        agriculturalMachineries.add(bulldozer);
+        agriculturalMachineries.add(harvester);
+        System.out.println(agriculturalMachineries);
+    
         addDistanceWithCheck(bulldozer, 1200);
         addDistanceWithCheck(harvester, 1000);
         addDistanceWithCheck(prius, 8320.5);
