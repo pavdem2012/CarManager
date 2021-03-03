@@ -20,8 +20,9 @@ public class CarManager {
         System.out.println(cars);
 
         AgriculturalMachinery bulldozer = new Bulldozer("Казахстан", 1972, 9000, 12000, "Blue");
+        
         AgriculturalMachinery harvester = new Harvester("Енисей", 1995, 25000, 8500, "Red");
-     // Добавление и вывод коллекции (AgriculturalMachinery)
+        // Добавление и вывод коллекции (AgriculturalMachinery)
         List<AgriculturalMachinery> agriculturalMachineries = new ArrayList<>();
         agriculturalMachineries.add(bulldozer);
         agriculturalMachineries.add(harvester);

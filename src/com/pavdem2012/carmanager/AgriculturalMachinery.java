@@ -19,7 +19,7 @@ public abstract class AgriculturalMachinery implements Serviceable {
 
     public void addDistance(double additinalDistance) {
         if (additinalDistance <= 0) {
-            throw new ArithmeticException("ATTENTION!!!ÓÂÀÃÀ!!!ÏÐÎÁÅÃ ÍÅ ÌÎÆÅÒ ÁÛÒÜ ÎÒÐÈÖÀÒÅËÜÍÛÌ!!!");
+            throw new ArithmeticException("ATTENTION!!!ï¿½ï¿½ï¿½ï¿½ï¿½!!!ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!!!");
         }
         else  { 
             enginehours += additinalDistance;
@@ -37,7 +37,7 @@ public abstract class AgriculturalMachinery implements Serviceable {
 
     @Override
     public String toString() {
-        return "Car [name=" + name + ", yearOfProdaction=" + yearOfProdaction + ", price=" + price + ", weight="
+        return "AgriculturalMachinery [name=" + name + ", yearOfProdaction=" + yearOfProdaction + ", price=" + price + ", weight="
                 + weight + ", color=" + color + ", distance=" + enginehours + ", distanceOnService=" + distanceOnService
                 + "]";
     }
