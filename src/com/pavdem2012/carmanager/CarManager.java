@@ -20,14 +20,14 @@ public class CarManager {
         System.out.println(cars);
 
         AgriculturalMachinery bulldozer = new Bulldozer("Казахстан", 1972, 9000, 12000, "Blue");
-        
+
         AgriculturalMachinery harvester = new Harvester("Енисей", 1995, 25000, 8500, "Red");
         // Добавление и вывод коллекции (AgriculturalMachinery)
         List<AgriculturalMachinery> agriculturalMachineries = new ArrayList<>();
         agriculturalMachineries.add(bulldozer);
         agriculturalMachineries.add(harvester);
         System.out.println(agriculturalMachineries);
-    
+
         addDistanceWithCheck(bulldozer, 1200);
         addDistanceWithCheck(harvester, 1000);
         addDistanceWithCheck(prius, 8320.5);
@@ -53,7 +53,7 @@ public class CarManager {
         System.out.println("Готовность к сервису \"Neoplan\": " + bus.isReadyToService());
         System.out.println("Готовность к сервису \"Камаз К5\": " + truck.isReadyToService());
     }
-    
+
     public static void addDistanceWithCheck(Car car, double myDistance) {
         try {
             car.addDistance(myDistance);
@@ -61,7 +61,9 @@ public class CarManager {
             System.out.println(exception.getMessage());
         }
     }
-    public static <AgriculturalMachineryr> void addDistanceWithCheck(AgriculturalMachineryr harvester, double myDistance) {
+
+    public static <AgriculturalMachineryr> void addDistanceWithCheck(AgriculturalMachineryr harvester,
+            double myDistance) {
         try {
             ((AgriculturalMachinery) harvester).addDistance(myDistance);
         } catch (ArithmeticException exception) {

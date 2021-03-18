@@ -8,10 +8,10 @@ public class Truck extends Car {
 
     @Override
     public boolean isReadyToService() {
-        if(distanceOnService > 50000) {
+        if (distanceOnService > 50000) {
             return true;
         } else {
             return false;
+        }
     }
-}
 }

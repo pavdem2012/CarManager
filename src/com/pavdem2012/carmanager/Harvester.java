@@ -8,10 +8,10 @@ public class Harvester extends AgriculturalMachinery {
 
     @Override
     public boolean isReadyToService() {
-        if(distanceOnService > 1000) {
+        if (distanceOnService > 1000) {
             return true;
         } else {
             return false;
-    }
+        }
     }
 }

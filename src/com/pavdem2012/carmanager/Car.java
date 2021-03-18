@@ -20,8 +20,7 @@ public abstract class Car implements Serviceable {
     public void addDistance(double additinalDistance) {
         if (additinalDistance <= 0) {
             throw new ArithmeticException("ATTENTION!!!УВАГА!!!ПРОБЕГ НЕ МОЖЕТ БЫТЬ ОТРИЦАТЕЛЬНЫМ!!!");
-        }
-        else  { 
+        } else {
             distance += additinalDistance;
             distanceOnService += additinalDistance;
         }
